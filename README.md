@@ -65,7 +65,7 @@ if __name__== "__main__":
     start_monitoring_web_app(host = host, port = port)
 
 ```
-Please shutdown or configure your firewall (iptable) before start the code as the bokeh or panel application, you can type this in your terminal:
+Please shutdown or configure your firewall (iptable) to allow other PC access IP and PORT of your workstation. Then, you can type this in your Linuex terminal:
 
 `panel serve example_2.py `
 or 
