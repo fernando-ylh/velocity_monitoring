@@ -16,9 +16,9 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 
 
 ### Pre-Requirements
-1) Make sure your workstation use Linux and it can be accessed from the network <br/> 
-2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution) <br/> 
-3) Install Bokeh, Holoviews, Geoviews, and Panel <br/> 
+1) Make sure your workstations use Linux and it can be accessed from the network. <br/> 
+2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
+3) Install Bokeh, Holoviews, Geoviews, and Panel <br/> .
 `conda install -c pyviz/label/dev -c bokeh/label/dev holoviews panel  bokeh geoviews`
 
 
@@ -27,13 +27,14 @@ In this package there are two procedures:<br/>
 1. Creating the web-application objects by using Holoviews, Geoviews, and Panel.<br/> 
 2. Displaying the objects using bokeh as web-application by using Bokeh and Panel.<br/> 
 
-All the code procedures has included in monitoring_web_app.py file. There are three example files to create the monitoring object, spatio_temp_vel_grid.nc, spatio_temporal_vel_tabular.npy, and temporal_vel_tabular.npy. 
-
+<br/> All the code procedures has included in monitoring_web_app.py file. There are three example files to create the monitoring object, spatio_temp_vel_grid.nc, spatio_temporal_vel_tabular.npy, and temporal_vel_tabular.npy. 
+<br/> 
+<br/> 
 ### How to Use
 Please download all the codes and data, then put it in the same directory.
 
-##### Creating Web-application Objects
-This example script to create the objects:
+##### 1. Creating Web-application Objects
+This the example code (example_1.py) how to create the  web-application objects:
 ```
 from monitoring_web_app import *
 
@@ -48,3 +49,24 @@ if __name__== "__main__":
                   output_data_folder = output_data_folder)
 
 ```
+
+<br/> 
+<br/> 
+
+##### 2. Display The Web-Application as Bokeh or Panel Service
+This the example code (example_2.py) to start the web-application
+```
+from monitoring_web_app import *
+
+if __name__== "__main__":
+    web_dir = "./web" ### the folder location of step no 1
+    host = "127.0.0.1"
+    port = 8080
+    start_monitoring_web_app(host = host, port = port)
+
+```
+Please shutdown or configure your firewall (iptable) before start the code as the bokeh or panel application, you can type this in your terminal:
+
+`panel serve example_2.py `
+or 
+`bokeh serve example_2.py `
