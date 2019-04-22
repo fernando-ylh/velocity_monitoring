@@ -65,7 +65,8 @@ if __name__== "__main__":
     start_monitoring_web_app(host = host, port = port)
 
 ```
-Please shutdown or configure your firewall (iptable) to allow other to access IP and PORT of your workstation. Then, type this in your Linuex terminal to start the web-application:
+Please shutdown or configure your firewall (iptable) so the people can access IP and PORT of your workstation. 
+Then, type this in your Linux terminal to start the web-application:
 
 `panel serve example_2.py `
 or 
