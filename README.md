@@ -29,7 +29,7 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 In this package there are two procedures:<br/> 
 1. Creating the web-application objects by using Holoviews, Geoviews, and Panel.<br/> 
 2. Displaying the objects using bokeh as web-application by using Bokeh of Panel.<br/> 
-All the code procedures has included in monitoring_web_app.py file. 
+<br/> All procedures has written in monitoring_web_app.py file. 
 
 <br/> 
 <br/> 
@@ -47,7 +47,7 @@ This file is a binnary file of numpy stuctured array that contain the spatio-tem
 dtype = [('starttime', '<M8[ns]'), ('station', '<U10'), ('latitude', '<f4'), ('longitude', '<f4'), ('e_max', '<f4')]
 ```
 #### 3. The spatio_temp_vel_grid.nc 
-This file is a NetCDF4 binarry data format that contains grid of spatio-temporal velocity changes from file no 2. There are three coordinates (such as starttime, longitude, and latitude) and one variable (velocity changes). We use xarray module to manage the NetCDF4 file. The following is example structure of this file:
+This file is a NetCDF4 binarry data format that contains grid of spatio-temporal velocity changes from file no 2. There are three coordinates (such as date, longitude, and latitude) and one variable (velocity changes or e_max). We use xarray module to manage the NetCDF4 file. The following is example structure of this file:
 ```
 Dimensions:    (date: 354, latitude: 79, longitude: 66)
 Coordinates:
