@@ -18,8 +18,9 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 ### Pre-Requirements
 1) Make sure your workstations use Linux and it can be accessed from the network. <br/> 
 2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
-3) Install Bokeh, Holoviews, Geoviews, and Panel. <br/>
+3) Install Bokeh, Holoviews, Geoviews, and Panel <br/> .
 `conda install -c pyviz/label/dev -c bokeh/label/dev holoviews panel  bokeh geoviews`
+
 
 
 ### Package Overview
@@ -27,11 +28,20 @@ In this package there are two procedures:<br/>
 1. Creating the web-application objects by using Holoviews, Geoviews, and Panel.<br/> 
 2. Displaying the objects using bokeh as web-application by using Bokeh and Panel.<br/> 
 
-<br/> All the code procedures has included in monitoring_web_app.py file. There are three example files to create the monitoring object, spatio_temp_vel_grid.nc, spatio_temporal_vel_tabular.npy, and temporal_vel_tabular.npy. 
+<br/> All the code procedures has included in monitoring_web_app.py file. 
+<br/> 
+<br/> 
+
+### Input Data Format
+There are three example files to create the monitoring object: 
+1. The spatio_temp_vel_grid.nc
+2. The spatio_temporal_vel_tabular.npy  
+3. The temporal_vel_tabular.npy. 
+
 <br/> 
 <br/> 
 ### How to Use
-Please download all the codes and data, then put it in the same directory.
+Please download all the codes and data, then put it in the same directory. 
 
 ##### 1. Creating Web-application Objects
 This the example code (example_1.py) how to create the  web-application objects:
@@ -65,8 +75,7 @@ if __name__== "__main__":
     start_monitoring_web_app(host = host, port = port)
 
 ```
-Please shutdown or configure your firewall (iptable) so the people can access IP and PORT of your workstation. 
-Then, type this in your Linux terminal to start the web-application:
+Please shutdown or configure your firewall (iptable) to allow other PC access IP and PORT of your workstation. Then, you can type this in your Linuex terminal:
 
 `panel serve example_2.py `
 or 
