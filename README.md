@@ -26,17 +26,21 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 ### Package Overview
 In this package there are two procedures:<br/> 
 1. Creating the web-application objects by using Holoviews, Geoviews, and Panel.<br/> 
-2. Displaying the objects using bokeh as web-application by using Bokeh and Panel.<br/> 
-
-<br/> All the code procedures has included in monitoring_web_app.py file. 
+2. Displaying the objects using bokeh as web-application by using Bokeh of Panel.<br/> 
+All the code procedures has included in monitoring_web_app.py file. 
 <br/> 
 <br/> 
 
 ### Input Data Format
-There are three example files to create the monitoring object: 
-1. The spatio_temp_vel_grid.nc
+There are three files to create the monitoring object:
+1. The temporal_vel_tabular.npy
 2. The spatio_temporal_vel_tabular.npy  
-3. The temporal_vel_tabular.npy. 
+This file is a binnary file of numpy stuctured array that contain the spatio-temporal velocity changes. There are 4 keys in this binnary file, starttime, longitude, latitude, station, and velocity changes (e_max). The following is the structure of this binnary file
+```
+dtype = [('starttime', '<M8[ns]'), ('station', '|O'), ('latitude', '<f4'), ('longitude', '<f4'), ('e_max', '<f4')]
+```
+3. The spatio_temp_vel_grid.nc 
+This file is a netcdf4 binarry data format that contains grid of spatio-temporal velocity changes from file no 2. There are four keys in this file starttime, longitude, latitude, and velocity changes. 
 
 <br/> 
 <br/> 
