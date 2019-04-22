@@ -15,6 +15,7 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 
 <br/> 
 <br/> 
+
 ### Pre-Requirements
 1) Make sure your workstations use Linux and it can be accessed from the network. <br/> 
 2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
