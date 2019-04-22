@@ -16,16 +16,35 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 
 
 ### Pre-Requirements
-1) Make sure your workstation can be accessed from the network <br/> 
-2) Download and install Python 3.6 from Anaconda Distribution <br/> 
+1) Make sure your workstation use Linux and it can be accessed from the network <br/> 
+2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution) <br/> 
 3) Install Bokeh, Holoviews, Geoviews, and Panel <br/> 
-`conda install -c pyviz/label/dev pyviz`
+`conda install -c pyviz/label/dev -c bokeh/label/dev holoviews panel  bokeh geoviews`
 
 
 ### Package Overview
 In this package there are two procedures:<br/> 
 1. Creating the web-application objects by using Holoviews, Geoviews, and Panel.<br/> 
 2. Displaying the objects using bokeh as web-application by using Bokeh and Panel.<br/> 
-All the procedures has included in monitoring_web_app.py file. There are three example files to create the monitoring object, spatio_temp_vel_grid.nc, spatio_temporal_vel_tabular.npy, and temporal_vel_tabular.npy. 
+
+All the code procedures has included in monitoring_web_app.py file. There are three example files to create the monitoring object, spatio_temp_vel_grid.nc, spatio_temporal_vel_tabular.npy, and temporal_vel_tabular.npy. 
 
 ### How to Use
+Please download all the codes and data, then put it in the same directory.
+
+##### Creating Web-application Objects
+This example script to create the objects:
+```
+from monitoring_web_app import *
+
+if __name__== "__main__":
+  spatio_temporal_vel_data_grid_path = "./spatio_temp_vel_grid.nc"
+  spatio_temporal_vel_data_tab_path = "./spatio_temporal_vel_tabular.npy", 
+  temporal_velocity_point_data_path = "./temporal_vel_tabular.npy", 
+  output_data_folder = "./web"
+  make_all_object(spatio_temporal_vel_data_grid_path = spatio_temporal_vel_data_grid_path, 
+                  spatio_temporal_vel_data_tab_path = spatio_temporal_vel_data_tab_path, 
+                  temporal_velocity_point_data_path = temporal_velocity_point_data_path, 
+                  output_data_folder = output_data_folder)
+
+```
