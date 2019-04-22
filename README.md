@@ -47,8 +47,16 @@ This file is a binnary file of numpy stuctured array that contain the spatio-tem
 dtype = [('starttime', '<M8[ns]'), ('station', '<U10'), ('latitude', '<f4'), ('longitude', '<f4'), ('e_max', '<f4')]
 ```
 #### 3. The spatio_temp_vel_grid.nc 
-This file is a netcdf4 binarry data format that contains grid of spatio-temporal velocity changes from file no 2. There are four keys in this file starttime, longitude, latitude, and velocity changes. 
-
+This file is a NetCDF4 binarry data format that contains grid of spatio-temporal velocity changes from file no 2. There are three coordinates (such as starttime, longitude, and latitude) and one variable (velocity changes). We use xarray module to manage the NetCDF4 file. The following is example structure of this file:
+```
+Dimensions:    (date: 354, latitude: 79, longitude: 66)
+Coordinates:
+  * longitude  (longitude) float64 129.2 129.3 129.3 129.4 ... 132.4 132.4 132.5
+  * latitude   (latitude) float64 30.89 30.94 30.99 31.04 ... 34.69 34.74 34.79
+  * date       (date) datetime64[ns] 2018-04-10 2018-04-11 ... 2019-03-29
+Data variables:
+    e_max      (latitude, longitude, date) float64 ...>
+```
 <br/> 
 <br/> 
 
@@ -71,8 +79,7 @@ if __name__== "__main__":
                   output_data_folder = output_data_folder)
 
 ```
-
-<br/> 
+<br/>
 
 ##### 2. Display The Web-Application as Bokeh or Panel Service
 This the example code (example_2.py) to start the web-application
@@ -86,10 +93,12 @@ if __name__== "__main__":
     start_monitoring_web_app(host = host, port = port)
 
 ```
-Please shutdown or configure your firewall (iptable) to allow other PC access IP and PORT of your workstation. Then, you can type this in your Linux terminal:
+Please shutdown or configure your firewall (iptable) to allow other PC access IP and PORT of your workstation. Then, please type this in your Linux terminal:
 
 `panel serve example_2.py `
-or 
+<br/> 
+or
+<br/> 
 `bokeh serve example_2.py `
-<br/> 
-<br/> 
+
+
