@@ -71,7 +71,7 @@ if __name__== "__main__":
                   output_data_folder = output_data_folder)
 
 ```
-<br/> 
+
 <br/> 
 
 ##### 2. Display The Web-Application as Bokeh or Panel Service
