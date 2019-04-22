@@ -18,7 +18,7 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 ### Pre-Requirements
 1) Make sure your workstations use Linux and it can be accessed from the network. <br/> 
 2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
-3) Install Bokeh, Holoviews, Geoviews, and Panel <br/> .
+3) Install Bokeh, Holoviews, Geoviews, and Panel. <br/>
 `conda install -c pyviz/label/dev -c bokeh/label/dev holoviews panel  bokeh geoviews`
 
 
@@ -65,7 +65,7 @@ if __name__== "__main__":
     start_monitoring_web_app(host = host, port = port)
 
 ```
-Please shutdown or configure your firewall (iptable) to allow other PC access IP and PORT of your workstation. Then, you can type this in your Linuex terminal:
+Please shutdown or configure your firewall (iptable) to allow other to access IP and PORT of your workstation. Then, type this in your Linuex terminal to start the web-application:
 
 `panel serve example_2.py `
 or 
