@@ -18,7 +18,7 @@ To continuously monitor crustal behaviors associated with earthquakes, magmatic 
 
 ### Pre-Requirements
 1) Make sure your workstations use Linux and it can be accessed from the network. <br/> 
-2) Download and install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
+2) Install Python 3.6 from Anaconda Distribution (https://www.anaconda.com/distribution). <br/> 
 3) Install Bokeh, Holoviews, Geoviews, and Panel.  <br/>
 `conda install -c pyviz/label/dev -c bokeh/label/dev holoviews panel  bokeh geoviews`
 
@@ -37,12 +37,12 @@ In this package there are two procedures:<br/>
 ### Input Data Format
 There are three files to create the monitoring object:
 #### 1. The temporal_vel_tabular.npy
-This file is a binnary file of numpy stuctured array that contain the temporal velocity changes for each station pair. There are 4 keys in this binnary file, starttime,  station, longitude, latitude, station pair (pair_name), pair longitude (pair_lon), pair latitude (pair_lat), and velocity changes (e_max). The following is the structure of this binnary file
+This file is a binnary file of numpy stuctured array that contains the temporal velocity changes for each station pair. There are 8 keys in this binnary files, starttime,  station, longitude, latitude, station pair (pair_name), pair longitude (pair_lon), pair latitude (pair_lat), and velocity changes (e_max). The following is the structure of this binnary file
 ```
 dtype = [('starttime', '<M8[ms]'), ('station', '<U10'), ('latitude', '<f4'), ('longitude', '<f4'), ('e_max', '<f4'), ('pair_name', '<U20'), ('pair_lon', '<f4'), ('pair_lat', '<f4')]
 ```
 #### 2. The spatio_temporal_vel_tabular.npy  
-This file is a binnary file of numpy stuctured array that contain the spatio-temporal velocity changes. There are 4 keys in this binnary file, starttime, longitude, latitude, station, and velocity changes (e_max). The following is the structure of this binnary file
+This file is a binnary file of numpy stuctured array that contains the spatio-temporal velocity changes. There are 4 keys in this binnary file, starttime, longitude, latitude, station, and velocity changes (e_max). The following is the structure of this binnary file
 ```
 dtype = [('starttime', '<M8[ns]'), ('station', '<U10'), ('latitude', '<f4'), ('longitude', '<f4'), ('e_max', '<f4')]
 ```
@@ -61,7 +61,7 @@ Data variables:
 <br/> 
 
 ### How to Use
-Please download all the codes and data, then put it in the same directory. 
+Please download all the codes and data, then put them in the same directory. 
 
 ##### 1. Creating Web-application Objects
 This the example code (example_1.py) how to create the  web-application objects:
